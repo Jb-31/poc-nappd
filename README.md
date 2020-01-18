@@ -21,3 +21,4 @@ http://localhost:4466/_admin
 docker-compose up -d
 prisma init --endpoint http://localhost:4466
 prisma deploy
+prisma generate

@@ -1,31 +1,32 @@
 
 const { ApolloServer, gql } = require('apollo-server');
+const { prisma } = require('./generated/prisma-client')
 
-
-const books = [
-    {
-      title: 'Harry Potter and the Chamber of Secrets',
-      author: 'J.K. Rowling',
-    },
-    {
-      title: 'Jurassic Park',
-      author: 'Michael Crichton',
-    },
-  ];
-
-  // Resolvers define the technique for fetching the types defined in the
+// Resolvers define the technique for fetching the types defined in the
 // schema. This resolver retrieves books from the "books" array above.
 const resolvers = {
     Query: {
-      books: () => books,
+      info: () => `This is the API of a Hackernews Clone`,
+      feed: (root, args, context, info) => {
+        return context.prisma.links()
+      },
     },
-  };
+    Mutation: {
+      post: (root, args, context) => {
+        return context.prisma.createLink({
+          url: args.url,
+          description: args.description,
+        })
+      },
+    },
+  }
 
   // The ApolloServer constructor requires two parameters: your schema
 // definition and your set of resolvers.
 const server = new ApolloServer({ 
     typeDefs: './src/schema.graphql',
     resolvers,
+    context: { prisma },
     playground: true, 
     introspection: true 
 });
