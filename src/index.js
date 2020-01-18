@@ -1,7 +1,7 @@
 
 const { ApolloServer, gql } = require('apollo-server')
 const { prisma } = require('./generated/prisma-client')
-
+const typeDefs = require('./schema.graphql')
 
 const resolvers = {
     Query: {
@@ -20,24 +20,7 @@ const resolvers = {
     },
   }
 
-  const typeDefs = `
-type Query {
-  info: String!
-  feed: [Link!]!
-}
-
-type Mutation {
-  post(url: String!, description: String!): Link!
-}
-
-type Link {
-  id: ID!
-  description: String!
-  url: String!
-}
-`
-
-  // The ApolloServer constructor requires two parameters: your schema
+// The ApolloServer constructor requires two parameters: your schema
 // definition and your set of resolvers.
 const server = new ApolloServer({ 
     typeDefs,
