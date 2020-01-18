@@ -1,5 +1,5 @@
 
-const { ApolloServer, gql } = require('apollo-server');
+const { ApolloServer, gql } = require('apollo-server')
 const { prisma } = require('./generated/prisma-client')
 
 
