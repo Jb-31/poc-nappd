@@ -1,14 +1,23 @@
-Needed
+Boilerplate to start BFF (Backend For Frontend) with NodeJS / Apollo Server 2 / Prima / PostgreSQL / Docker
+====================
+
+
+Prerequisites
+--------------------
 nodejs / npm 13.6.0
 prisma cli (npm install -g prisma) 1.34.10
+Docker / Docker-compose
 
-Ressources :
+Ressources used :
+------------------------
 https://www.howtographql.com/graphql-js/4-adding-a-database/
+https://github.com/ant-design/ant-design-pro/issues/1260
 
 start the server : 
+------------------------
 ```
 docker-compose up -d
-node index.js
+node src/index.js
 ```
 
 http://localhost:4000/
