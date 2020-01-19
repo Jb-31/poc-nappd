@@ -25,6 +25,12 @@ http://localhost:4000/
 Prisma admin
 http://localhost:4466/_admin
 
+Ant design console
+http://localhost:3000/
+
+Frontend:
+http://localhost:8000/welcome
+
 
 
 docker-compose up -d
