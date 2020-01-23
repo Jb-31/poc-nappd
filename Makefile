@@ -1,3 +1,7 @@
+install::
+	cd backend
+	npm install
+
 start::
-	docker-compsoer up -d
+	docker-compose up -d
 	node backend/src/index.js

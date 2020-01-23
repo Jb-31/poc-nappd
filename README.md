@@ -13,13 +13,27 @@ Ressources used :
 https://www.howtographql.com/graphql-js/4-adding-a-database/
 https://github.com/ant-design/ant-design-pro/issues/1260
 
-start the server : 
+Install & start the backend server : 
 ------------------------
 ```
+cd backend
+npm install
 docker-compose up -d
-node src/index.js
+cd backend/prisma
+prisma deploy
+node backend/src/index.js
 ```
 
+Install & start the frontend react app : 
+------------------------
+```
+cd frontend
+npm install
+npm start
+```
+
+
+Graphql web interface
 http://localhost:4000/
 
 Prisma admin
@@ -30,10 +44,3 @@ http://localhost:3000/
 
 Frontend:
 http://localhost:8000/welcome
-
-
-
-docker-compose up -d
-prisma init --endpoint http://localhost:4466
-prisma deploy
-prisma generate
