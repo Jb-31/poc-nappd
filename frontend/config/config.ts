@@ -24,7 +24,7 @@ const plugins: IPlugin[] = [
         // default zh-CN
         default: 'fr-FR',
         // default true, when it is true, will use `navigator.language` overwrite default
-        baseNavigator: true,
+        baseNavigator: false,
       },
       dynamicImport: {
         loadingComponent: './components/PageLoading/index',
@@ -131,6 +131,7 @@ export default {
   // Theme for antd: https://ant.design/docs/react/customize-theme-cn
   theme: {
     // ...darkTheme,
+    'primary-color': '#ff0000',
   },
   define: {
     ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION:
@@ -173,7 +174,7 @@ export default {
     },
   },
   manifest: {
-    basePath: '/',
+    basePath: '.',
   },
   // chainWebpack: webpackPlugin,
   // proxy: {
