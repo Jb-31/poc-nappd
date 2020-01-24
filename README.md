@@ -11,8 +11,12 @@ Docker / Docker-compose
 Ressources used :
 ------------------------
 https://www.howtographql.com/graphql-js/4-adding-a-database/
+
 https://github.com/ant-design/ant-design-pro/issues/1260
+
 https://www.apollographql.com/docs/react/get-started/
+
+https://blog.logrocket.com/build-a-graphql-react-app-with-typescript/
 
 Install & start the backend server : 
 ------------------------
