@@ -12,6 +12,7 @@ Ressources used :
 ------------------------
 https://www.howtographql.com/graphql-js/4-adding-a-database/
 https://github.com/ant-design/ant-design-pro/issues/1260
+https://www.apollographql.com/docs/react/get-started/
 
 Install & start the backend server : 
 ------------------------
@@ -30,6 +31,14 @@ Install & start the frontend react app :
 cd frontend
 npm install
 npm start
+```
+
+Start the frontend react app PROD (static) : 
+------------------------
+```
+cd frontend
+npm run build
+http://localhost:17080
 ```
 
 
