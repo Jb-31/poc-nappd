@@ -45,6 +45,13 @@ npm run build
 http://localhost:17080
 ```
 
+Start the frontendv2 react app : 
+------------------------
+```
+cd frontend
+npm start
+```
+
 
 Graphql web interface
 http://localhost:4000/
