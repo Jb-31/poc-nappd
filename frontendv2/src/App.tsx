@@ -5,6 +5,7 @@ import Button from 'antd/es/button';
 import './App.css';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { useQuery } from '@apollo/react-hooks';
+import { Query } from "@apollo/react-hooks";
 
 const client = new ApolloClient({
   uri: 'http://localhost:4466',
@@ -34,6 +35,13 @@ client
   }
 `;
 
+interface Data {  
+    links: Array<{ id: string; description: string; url: string; }>;  
+};
+
+interface Variables {
+  first: number;
+};
 
   function Links() {
     const { loading, error, data } = useQuery(LINKS);
